@@ -1,0 +1,44 @@
+
+body {
+  background-color: #21132d;
+  font-family: Times New Roman;
+  text-align: center;
+  color: white;
+}
+
+.game-container {
+  margin: 100px auto;
+  padding: 40px 20px;
+  max-width: 500px;
+  background-color: #382047;
+  border-radius: 20px;
+}
+
+h1 {
+  color: orange;
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 20px;
+  margin: 30px;
+}
+
+button {
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  padding: 18px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffb347;
+}
