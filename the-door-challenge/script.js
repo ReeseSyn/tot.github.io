@@ -10,6 +10,7 @@ let roundActive = true;
 let stage2WinningDoor;
 let currentPrize = 10;
 let successfulPlays = 0;
+let totalPrize = 0;
 
 // Randomly assign the winning door
 function resetRound() {
@@ -111,41 +112,27 @@ function chooseStage2Door(doorNumber) {
         prizeWon = currentPrize / 2;
     }
 
-    successfulPlays++;
+   successfulPlays++;
 
-    alert(
-        "Congratulations! You won $" + prizeWon + "!"
-    );
+totalPrize += prizeWon;
 
-    // Check whether the player completed all three plays
-    if (successfulPlays === 3) {
-        document.getElementById("stage2-area").style.display = "none";
-        document.getElementById("game-area").style.display = "none";
+alert(
+    "Congratulations! You won $" + prizeWon + "!"
+);
 
-        document.getElementById("final-reward").style.display = "block";
+// Check whether the player completed all three plays
+if (successfulPlays === 3) {
+    document.getElementById("stage2-area").style.display = "none";
+    document.getElementById("game-area").style.display = "none";
 
-        // Update the final congratulations message
-        document.querySelector("#final-reward h2").textContent =
-            "AMAZING! You completed all three challenges! Your final prize was $" + prizeWon + "!";
+    document.getElementById("final-reward").style.display = "block";
 
-        const playAgain = confirm(
-            "Would you like to play again?"
-        );
+    // Display the final congratulations message
+    document.querySelector("#final-reward h2").textContent =
+        "CONGRATULATIONS! You completed the game and won a final prize of $" + totalPrize + "!";
 
-        if (playAgain) {
-            currentPrize = 10;
-            successfulPlays = 0;
-
-            document.getElementById("final-reward").style.display = "none";
-            document.getElementById("game-area").style.display = "block";
-
-            resetRound();
-        } else {
-            alert("Thanks for playing THE DOOR CHALLENGE!");
-        }
-
-        return;
-    }
+    return;
+}
 
     // Double the prize for the next successful play
     currentPrize *= 2;
