@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Door Challenge</title>
 
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<div class="game-container">
+
+  <h1>THE DOOR CHALLENGE</h1>
+
+  <p class="subtitle">
+    Choose wisely. Trust your instincts.
+  </p>
+
+  <div id="game-area">
+
+    <h2>Stage 1: Choose a Door</h2>
+
+    <p>
+      One door advances you. Two doors send you back.
+    </p>
+
+    <div class="doors">
+
+      <button class="door" id="door1">
+        Door 1
+      </button>
+
+      <button class="door" id="door2">
+        Door 2
+      </button>
+
+      <button class="door" id="door3">
+        Door 3
+      </button>
+
+    </div>
+
+  </div>
+  
+<div id="stage2-area" style="display: none;">
+    <h2>Stage 2: The Final Challenge</h2>
+    <p>I wonder what's behind these doors? 🤔 Let's find out!</p>
+
+    <div class="doors">
+        <button class="door" id="stage2-door1">Door 1</button>
+        <button class="door" id="stage2-door2">Door 2</button>
+    </div>
+</div>
+</div>
+  <div id="final-reward" style="display: none;">
+    <h2>Congratulations! You completed THE DOOR CHALLENGE!</h2>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT99iRSwiazNWX2hSeuIgT9izydnBZhHUtgHSn2sssXKg&s=10"
+         alt="Blue hydrangea"
+         width="350">
+</div>
+<script src="script.js"></script>
