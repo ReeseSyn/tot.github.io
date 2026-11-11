@@ -129,7 +129,7 @@ if (successfulPlays === 3) {
 
     // Display the final congratulations message
     document.querySelector("#final-reward h2").textContent =
-        "CONGRATULATIONS! You completed the game and won a final prize of $" + totalPrize + "!";
+        "CONGRATULATIONS! You completed the game and won a final prize of $" + totalPrize + "! 💝";
 
     return;
 }
